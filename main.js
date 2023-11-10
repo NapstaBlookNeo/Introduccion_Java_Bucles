@@ -18,7 +18,7 @@ do {
     } else {
         console.log(E2number)
     }
-} while (E2Breaker == true)
+} while (E2breaker == true)
 console.log("")
 
 console.log("-------------------- Ejercicio 3 --------------------")
@@ -42,7 +42,7 @@ console.log("")
 
 console.log("-------------------- Ejercicio 4 --------------------")
 console.log("Números primos")
-E4breaker=true
+let E4breaker=  true
 
 
 while (E4breaker == true) {
@@ -99,7 +99,7 @@ var E7numeros = [10, 20, 30, 50, 80, 160, 250, 400, 500, 1000];
 
 console.log("El doble de cada número del array es:");
 
-for (var i = 0; i < E7numeros.length; i++) {
+for (let i = 0; i < E7numeros.length; i++) {
   console.log("El doble de " + E7numeros[i] + " es " + E7numeros[i] * 2);
 }
 console.log("")

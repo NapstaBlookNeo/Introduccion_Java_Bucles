@@ -1,4 +1,3 @@
-/*
 console.log("-------------------- Ejercicio 1 --------------------")
 console.log("Tablas de Multiplicar")
 let E1number = prompt("Ingresar numero a multiplicar: ")
@@ -40,7 +39,7 @@ do {
     }
 }while (E3breaker == true)
 console.log("")
-*/
+
 console.log("-------------------- Ejercicio 4 --------------------")
 console.log("Números primos")
 E4breaker=true
@@ -73,7 +72,6 @@ while (E4breaker == true) {
     }
 }
 
-/*
 console.log("")
 
 console.log("-------------------- Ejercicio 5 --------------------")
@@ -143,10 +141,6 @@ let E8familia = [
 for (i = 0; i < E8familia.length; i++) {
     console.log("Mi " + E8familia[i].relacion + " " + E8familia[i].nombre + " es " + E8familia[i].ocupacion + " y tiene " + E8familia[i].edad + " años")
 }
-
-
-
-
 console.log("")
 
 console.log("-------------------- Ejercicio 9 --------------------")
@@ -164,4 +158,3 @@ console.log("")
 console.log("-------------------- Ejercicio 15 --------------------")
 console.log("")
 console.log("-------------------- Ejercicio 16 --------------------")
-*/

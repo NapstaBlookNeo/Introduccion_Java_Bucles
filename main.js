@@ -49,7 +49,7 @@ while (E4breaker == true) {
     
     let E4esPrimo = false
     let E4divisores = 0
-    E4numero = parseInt(prompt("Ingrese el número que desea verificar (Ingrese 0 para terminar)"))
+    let E4numero = parseInt(prompt("Ingrese el número que desea verificar (Ingrese 0 para terminar)"))
     if (E4numero==0){
         E4breaker=false
     }
@@ -95,7 +95,8 @@ for (let i = 0; i < E6frutas.length; i++) {
 console.log("")
 
 console.log("-------------------- Ejercicio 7 --------------------")
-var E7numeros = [10, 20, 30, 50, 80, 160, 250, 400, 500, 1000];
+console.log("duplicar números")
+let E7numeros = [10, 20, 30, 50, 80, 160, 250, 400, 500, 1000];
 
 console.log("El doble de cada número del array es:");
 
@@ -144,17 +145,116 @@ for (i = 0; i < E8familia.length; i++) {
 console.log("")
 
 console.log("-------------------- Ejercicio 9 --------------------")
+console.log("Números pares")
+let E9numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+for(let i = 0; i < E9numeros.length;i++){
+    if(E9numeros[i] % 2 == 0){
+        console.log(E9numeros[i])
+    }
+}
 console.log("")
+
 console.log("-------------------- Ejercicio 10 --------------------")
+console.log("Suma de números pares e impares")
+let E10pares = 0
+let E10impares = 0
+let E10numero = 5
+do{
+E10numero = parseInt(prompt("Ingrese el número que desea sumar (ingresar 0 para terminar)"))
+if (E10numero % 2 == 0){
+    E10pares = E10numero+ E10pares
+}else{
+    E10impares = E10numero+ E10impares
+}
+console.log("----------------------------------------")
+console.log("suma total de numeros pares: " + E10pares)
+console.log("suma total de numeros pares: " + E10impares)
+}while(E10numero!=0)
 console.log("")
+
 console.log("-------------------- Ejercicio 11 --------------------")
+console.log("Número más grande")
+let E11numeros = [10, 7, 30, 65, 16, 20, 19, 28, 37, 5];
+let E11numeroMayor = 0
+for(let i = 0; i < E11numeros.length;i++){
+    if(E11numeros[i] > E11numeroMayor){
+        E11numeroMayor = E11numeros[i]
+    }
+}
+console.log("El número mayor es: " + E11numeroMayor)
 console.log("")
+
 console.log("-------------------- Ejercicio 12 --------------------")
+console.log("Número más chico")
+let E12numeros = [10, 7, 30, 65, 16, 20, 19, 28, 37, 5];
+let E12numeroMenor =  Number.MAX_SAFE_INTEGER
+for(let i = 0; i < E12numeros.length;i++){
+    if(E12numeros[i] < E12numeroMenor){
+        E12numeroMenor = E12numeros[i]
+    }
+}
+console.log("El número más chico es: " + E12numeroMenor)
 console.log("")
+
 console.log("-------------------- Ejercicio 13 --------------------")
+console.log("Piedra papel o tijera")
+E13jugador1 = prompt("Inirese el nombre del Jugador 1")
+E13jugador2 = prompt("Ingrese el nombre del Jugador 2")
+E13empate = true
+do{
+E13manoJugador1 = prompt(E13jugador1 + " porfavor ingrese su mano (Piedra, Papel, Tijera)").toLowerCase()
+E13manoJugador2 = prompt(E13jugador2 + " porfavor ingrese su mano (Piedra, Papel, Tijera)").toLowerCase()
+if (E13manoJugador1 == "piedra" && E13manoJugador2 == "tijera" || E13manoJugador1 == "papel" && E13manoJugador2 == "piedra" || E13manoJugador1 == "tijera" && E13manoJugador2 == "papel"){
+    console.log(E13jugador1 + " ha ganado con " + E13manoJugador1 + " a " + E13manoJugador2 + " de " + E13jugador2)
+    E13empate = false
+}else if (E13manoJugador2 == "piedra" && E13manoJugador1 == "tijera" || E13manoJugador2 == "papel" && E13manoJugador1 == "piedra" || E13manoJugador2 == "tijera" && E13manoJugador1 == "papel"){
+    console.log(E13jugador2 + " ha ganado con " + E13manoJugador2 + " a " + E13manoJugador1 + " de " + E13jugador1)
+    E13empate = false
+}else if (E13manoJugador1==E13manoJugador2){
+    console.log("ambos jugadores han empatado con " + E13manoJugador2 + " Se juega nuevamente")
+    E13empate = true
+}
+}while(E13empate == true)
 console.log("")
+
 console.log("-------------------- Ejercicio 14 --------------------")
+console.log("Estrellas")
+E14numero = parseInt(prompt("Cuantas estrellas desea que tenga la última linea"))
+let E14estrellas = ""
+
+for(let i = 0; i < E14numero; i++){
+    E14estrellas = E14estrellas + "☆ "
+    console.log(E14estrellas)
+}
 console.log("")
+
 console.log("-------------------- Ejercicio 15 --------------------")
+console.log("Estrellas")
+E15numero = parseInt(prompt("Cuantas estrellas desea que tenga la primera linea"))
+
+
+for(let i = E15numero; i > 0; i--){
+    let E15estrellas = ""
+    for (let j = i; j > 0; j--){
+    E15estrellas = E15estrellas + " ☆"
+    }
+    console.log(E15estrellas)
+}
 console.log("")
+
 console.log("-------------------- Ejercicio 16 --------------------")
+let E16numeros = [100, 50, 80, 20, 70, 30, 10, 60, 40, 90];
+console.log("Orden original: " + E16numeros)
+
+for (let i = 0; i < E16numeros.length; i++) {
+    for (let j = 0; j < E16numeros.length; j++) {
+        if (E16numeros[j] > E16numeros[j + 1]) {
+            E16numeros[j] = E16numeros[j] + E16numeros[j + 1];
+            E16numeros[j + 1] = E16numeros[j] - E16numeros[j + 1];
+            E16numeros[j] = E16numeros[j] - E16numeros[j + 1];
+        }
+    }
+}
+
+console.log("Orden organizado: " + E16numeros);
